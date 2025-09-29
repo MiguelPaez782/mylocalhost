@@ -87,25 +87,25 @@ Aplicación sencilla para gestionar y acceder a tus proyectos locales desde una 
 
 ## 📸 Capturas de pantalla
 
-1. **Vista principal** (`index.php` con algunos proyectos listados).  
-   ```markdown
+1. **Vista principal**
+  
    ![Vista principal](assets/screenshots/home.png)
-   ```
+ 
 
 2. **Agregar proyecto**
-   ```markdown
+ 
    ![Agregar proyecto](assets/screenshots/add-project.gif)
-   ```
+   
 
 3. **Búsqueda en tiempo real** 
-   ```markdown
+   
    ![Búsqueda](assets/screenshots/search-project.gif)
-   ```
+
 
 4. **Eliminar proyecto**  
-   ```markdown
+ 
    ![Eliminar proyecto](assets/screenshots/delete-project.gif)
-   ```
+
 
 ---
 
@@ -126,13 +126,12 @@ mylocalhostapp/
 │   ├── js/
 │   │   ├── search_ajax.js
 │   │   └── jquery-3.7.1.min.js
-│   ├── img/
-│   │   ├── icon-app.png
-│   │   └── projects-icons/
-|   |       └── defauld.png
-│   └── screenshots/   ← aquí van las capturas
-│
-└── projects/          ← se crean las carpetas de proyectos
+│   └── img/
+│       ├── icon-app.png
+│       └── projects-icons/
+|           └── default.png
+│  
+└── projects/   
 ```
 
 ---

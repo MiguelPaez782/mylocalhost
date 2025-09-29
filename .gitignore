@@ -1,0 +1,36 @@
+# --- Archivos del sistema ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs ---
+*.log
+error_log
+logs/
+
+# --- Archivos temporales y backups ---
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# --- Configuración sensible ---
+.env
+config.php
+db.php
+
+# --- Directorios de caché ---
+/cache/
+/tmp/
+/sessions/
+/vendor/
+/node_modules/
+
+# --- IDEs y editores ---
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# --- Otros ---
+/*.sql

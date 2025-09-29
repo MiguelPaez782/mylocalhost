@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.icon-app {
+    width: 40px;
+}
+
+.link {
+    color: #f3f3f3;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+.btn {
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: .4rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btn-bg-dark {
+    background-color: #272727;
+    color: #f3f3f3;
+}
+.btn-bg-clear {
+    background-color: #f3f3f3;
+    color: #272727;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+.grid-content {
+    background-color: #f3f3f3;
+    min-width: 1000px;
+    display: grid;
+    gap: 10px;
+    grid-template:
+    "header header" auto
+    "main manager-projects-container" auto /
+    auto 400px;
+}
+
+.grid-content > * {
+    padding: 10px;
+}
+
+.navbar {
+    grid-area: header;
+    padding: 10px 15px;
+    background-color: #272727;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main {
+    background-color: #fff;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    border: none;
+    border-radius: .4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    margin-left: 10px;
+    max-height: 550px;overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.manager-projects-container {
+    grid-area: manager-projects-container;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+.form-manager-project-container {
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: .4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.title-form-project {
+    text-align: center;
+}
+
+.form-add-new-project,
+.form-delete-project {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    flex: 1.1rem;
+    border-radius: .4rem;
+    border: 2px solid #272727;
+    background: none;
+    color: #272727;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+
+.a-btn-project {
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    color: #272727;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 130px;
+    min-height: 150px;
+}
+
+.icon-project img {
+    width: 100px;
+    border-radius: 0.6rem;
+    border: 2px solid #272727;
+}

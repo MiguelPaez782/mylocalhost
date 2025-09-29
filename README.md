@@ -89,22 +89,22 @@ Aplicación sencilla para gestionar y acceder a tus proyectos locales desde una 
 
 1. **Vista principal**
   
-   ![Vista principal](assets/screenshots/home.png)
+   ![Vista principal](screenshots/home.png)
  
 
 2. **Agregar proyecto**
  
-   ![Agregar proyecto](assets/screenshots/add-project.gif)
+   ![Agregar proyecto](screenshots/add-project.gif)
    
 
 3. **Búsqueda en tiempo real** 
    
-   ![Búsqueda](assets/screenshots/search-project.gif)
+   ![Búsqueda](screenshots/search-project.gif)
 
 
 4. **Eliminar proyecto**  
  
-   ![Eliminar proyecto](assets/screenshots/delete-project.gif)
+   ![Eliminar proyecto](screenshots/delete-project.gif)
 
 
 ---

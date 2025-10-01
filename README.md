@@ -138,5 +138,7 @@ mylocalhostapp/
 
 ## ✨ Autor
 
-Creado por **Miguel Páez**  
+Creado por **Miguel Páez**
+🔗 [GitHub](https://github.com/MiguelPaez782)
+
 Siéntete libre de contribuir o modificarlo para tu uso personal.

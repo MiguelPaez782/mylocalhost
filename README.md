@@ -67,11 +67,21 @@ htdocs/
 Crea el archivo `.htaccess` en tu directorio raíz y con el siguiente código:
 
 ```
-# ======================================================
+# ============================================================
 # MyLocalHost — Apache .htaccess (for www/ or htdocs/)
-# ======================================================
+# ============================================================
 
-Options -Indexes
+# Enable directory indexing for projects
+Options +Indexes
+IndexIgnore _lm phpmyadmin
+
+# Deny directory listing for specific config/system folders
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.php !-f
+RewriteCond %{REQUEST_FILENAME}/index.html !-f
+RewriteCond %{REQUEST_URI} ^/(_lm|phpmyadmin)/ [NC]
+RewriteRule ^ - [F]
+
 Options -MultiViews
 
 # ─── Rewrite Engine ──────────────────────────────────────────

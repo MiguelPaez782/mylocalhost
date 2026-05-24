@@ -129,16 +129,39 @@ htdocs/
 └── _lm/
 ```
 
-Asegúrate de tener `mod_rewrite` habilitado en Apache.
+---
 
-### Paso 4 — Verificar permisos
+> 💡 Los siguientes pasos aplican **solo para Linux**. En Windows no son necesarios.
 
-PHP necesita permisos de **lectura/escritura** en el directorio raíz para crear y renombrar carpetas:
+### Paso 4 — Habilitar `mod_rewrite` (Linux)
 
 ```bash
-# En Linux/Mac (ajusta la ruta según tu servidor):
-chmod 755 /var/www/html/
+sudo a2enmod rewrite
+sudo systemctl restart apache2
 ```
+
+### Paso 5 — Configurar permisos (Linux)
+
+En Linux, PHP se ejecuta como el usuario `www-data`, por lo que necesita permisos de **lectura/escritura** en el directorio raíz para crear, renombrar y eliminar carpetas.
+
+1. Agrega tu usuario al grupo `www-data`:
+   ```bash
+   sudo usermod -aG www-data $USER
+   ```
+
+2. Cambia el grupo propietario del directorio raíz a `www-data`:
+   ```bash
+   sudo chown -R $USER:www-data /ruta/a/tu/htdocs/
+   ```
+
+3. Establece permisos de lectura/escritura para el grupo y activa el **setgid** (para que los archivos nuevos hereden el grupo `www-data`):
+   ```bash
+   sudo chmod -R g+rwxs /ruta/a/tu/htdocs/
+   ```
+
+4. **Cierra sesión y vuelve a iniciarla** (o reinicia el sistema) para que los cambios de grupo surtan efecto.
+
+> ⚠️ Reemplaza `/ruta/a/tu/htdocs/` con la ruta real de tu directorio raíz (ej. `/var/www/html/` o `/home/tu-usuario/server/www/`).
 
 ---
 
